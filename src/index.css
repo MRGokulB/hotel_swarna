@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-light text-dark font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-secondary hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-center mb-12;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105;
+  }
+
+  .menu-item {
+    @apply flex items-center justify-between p-4 border-b border-gray-200 last:border-0;
+  }
+
+  .menu-item-title {
+    @apply text-lg font-semibold text-primary;
+  }
+
+  .menu-item-price {
+    @apply text-lg font-bold;
+  }
+
+  .menu-item-description {
+    @apply text-gray-600 text-sm mt-1;
+  }
+}
